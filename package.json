@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "fix.lint": "eslint --cache --fix --ext ts,js,tsx src",
     "start.android": "expo start --android",
     "start.ios": "expo start --ios",
     "start.web": "expo start --web",
-    "test.dependencies": "yarn depcheck --ignores=depcheck,typescript",
+    "test.dependencies": "yarn depcheck --ignores=depcheck,typescript,react-native-web",
     "test.lint": "eslint --cache --ext ts,js,tsx src",
     "test.types": "yarn tsc"
   },
@@ -21,11 +22,8 @@
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@types/react": "^18.2.43",
     "@types/debug": "^4.1.7",
-    "@types/react": "~18.2.14",
-    "@types/express": "^4.17.21",
-    "@types/uuid": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",
@@ -36,9 +34,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.0",
     "typescript": "^5.3.3",
-    "depcheck": "^1.4.7",
-    "@mikro-orm/cli": "^5.9.4",
-    "@types/cors": "^2.8.17"
+    "depcheck": "^1.4.7"
   },
   "private": true
 }

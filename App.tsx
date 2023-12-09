@@ -1,19 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import debug from 'debug';
+import Home from "./src/Home";
+
+const d = debug('terrene.server');
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Welcome to Site Seeker</Text>
-    </View>
-  );
+  return <Home />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
