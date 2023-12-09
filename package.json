@@ -4,10 +4,11 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "fix.lint": "eslint --cache --fix --ext ts,js,tsx src",
+    "organize": "node node_modules/jscodeshift/bin/jscodeshift.js packages  --extensions=tsx,ts --parser=tsx -t node_modules/siteseekerlib/tools/organize.ts",
     "start.android": "expo start --android",
     "start.ios": "expo start --ios",
     "start.web": "expo start --web",
-    "test.dependencies": "yarn depcheck --ignores=depcheck,typescript,react-native-web",
+    "test.deps": "yarn depcheck --ignores=depcheck,typescript,react-native-web",
     "test.lint": "eslint --cache --ext ts,js,tsx src",
     "test.types": "yarn tsc"
   },
@@ -22,19 +23,12 @@
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
+    "siteseekerlib": "git+https://github.com/siteseeker-co/siteseekerlib.git#v1.1.0",
     "@types/react": "^18.2.43",
     "@types/debug": "^4.1.7",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.0",
-    "typescript": "^5.3.3",
-    "depcheck": "^1.4.7"
+    "typescript": "^5.3.3"
   },
   "private": true
 }
