@@ -32,6 +32,7 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+.eslintcache
 
 # ide
 .idea
